@@ -2,22 +2,193 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Yayak's Cute Web</title>
+  <title>Yayak’s Dreamy Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff0f6;
-      color: #333;
-      text-align: center;
-      padding: 60px;
+    * {
+      box-sizing: border-box;
     }
+
+    body {
+      margin: 0;
+      font-family: 'Times New Roman', cursive, sans-serif;
+      background: linear-gradient(to right, #ffe6f0, #fff1f9);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .profile-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      padding: 30px;
+      text-align: center;
+      max-width: 500px;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ffb6c1;
+    }
+
     h1 {
-      color: #e75480;
+      margin: 15px 0 5px;
+      color: #ff69b4;
+      font-size: 2em;
+      animation: sparkle 2s infinite;
+    }
+
+    @keyframes sparkle {
+      0% { text-shadow: 0 0 5px #ffb6c1; }
+      50% { text-shadow: 0 0 15px #ffc0cb; }
+      100% { text-shadow: 0 0 5px #ffb6c1; }
+    }
+
+    p {
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .hobbies {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .socials a {
+      text-decoration: none;
+      color: white;
+      background-color: #ff69b4;
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin: 0 5px;
+      display: inline-block;
+      transition: 0.3s ease;
+    }
+
+    .socials a:hover {
+      background-color: #ff1493;
+    }
+
+    .section {
+      max-width: 600px;
+      width: 100%;
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    .section h2 {
+      color: #ff69b4;
+      margin-bottom: 15px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 2px solid #ffd6e7;
+      border-radius: 10px;
+      background-color: #fff5fa;
+    }
+
+    form button {
+      padding: 10px 20px;
+      background-color: #ff85b3;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background-color: #ff4f94;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 600px) {
+      .profile-card, .section {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      .hobbies {
+        font-size: 1.2em;
+      }
+
+      .socials a {
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Hi I'm Yayak 🧡</h1>
-  <p>Welcome to my very first GitHub Pages website! 🌸</p>
+
+  <!-- Profile -->
+  <div class="profile-card">
+    <img src="your-photo.jpg" alt="Yayak's Photo" class="profile-img">
+    <h1>Yayak 🧡</h1>
+    <p>Blushy pubdok girl dreaming of ESM Electro ITS</p>
+    <div class="hobbies">
+      💄 🎨 🎧 📸 💻
+      <p style="font-size: 14px;">Makeup • Art • Music • Pubdok • Tech</p>
+    </div>
+    <div class="socials">
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+      <a href="https://tiktok.com" target="_blank">TikTok</a>
+    </div>
+  </div>
+
+  <!-- Dreams Section -->
+  <div class="section">
+    <h2>💻 My Dreams</h2>
+    <p>I want to become a proud Elektro ITS girl! 🧡✨ I'm inspired by my dad, who was an Elektro UI graduate. Someday, I’ll code systems, design dreamy UI, and maybe even build smart tech that helps others. ESM, Elektro Sampe Mati!!! ⚡</p>
+  </div>
+
+  <!-- Photo Gallery -->
+  <div class="section">
+    <h2>🖼️ Moodboard / Gallery</h2>
+    <div class="gallery">
+      <img src="https://source.unsplash.com/featured/?pink" alt="Mood 1">
+      <img src="https://source.unsplash.com/featured/?flowers" alt="Mood 2">
+      <img src="https://source.unsplash.com/featured/?laptop" alt="Mood 3">
+      <img src="https://source.unsplash.com/featured/?coffee" alt="Mood 4">
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="section">
+    <h2>💌 Send Me a Message</h2>
+    <form>
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
 </body>
 </html>
